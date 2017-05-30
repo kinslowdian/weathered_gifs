@@ -32,6 +32,8 @@ function weather_define()
 {
 	var w = main_weather.data.current_observation.weather;
 
+	// https://www.wunderground.com/weather/api/d/docs?d=resources/phrase-glossary
+
 	main_weather.weatherType = w.toLowerCase();
 
 	trace(main_weather.weatherType);
