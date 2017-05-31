@@ -72,6 +72,8 @@ function weather_define()
 	main_weather.weatherUseDisplay 	= ws.dataDisplay;
 
 	trace(main_weather);
+
+	gif_build();
 }
 
 
@@ -82,6 +84,7 @@ function gif_build()
 {
 	main_gif = {};
 	main_gif.url = "https://api.giphy.com/v1/gifs/search?q=" + main_weather.weatherUseSearch + "&api_key=dc6zaTOxFJmzC";
+	main_gif.target = document.querySelector("#display-wrapper .display-gif");
 
 	load_JSON_data(main_gif.url, gif_data_found);
 }
@@ -97,5 +100,16 @@ function gif_data_found(data)
 
 function gif_define()
 {
-	
+	var gifSelect;
+	var gifFile;
+
+	gifSelect = Math.floor(Math.random() * main_gif.data.data.length);
+	gifFile = main_gif.data.data[gifSelect].images.downsized_large.url;
+
+	gif_insert(gifFile);
+}
+
+function gif_insert(file)
+{
+	main_gif.target.style.backgroundImage = "url(" + file + ")";
 }
