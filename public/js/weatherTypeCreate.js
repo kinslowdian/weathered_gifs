@@ -1,3 +1,4 @@
+// https://www.wunderground.com/weather/api/d/docs?d=resources/phrase-glossary
 
 function weatherTypeCreate(string)
 {
@@ -292,16 +293,5 @@ function weatherTypeCreate(string)
 
 	return wtc;
 }
-
-/*
-function test()
-{
-	var w = weatherTypeCreate("light thunderstorms and snow");
-
-	console.log(w);
-}
-
-test();
-*/
 
 

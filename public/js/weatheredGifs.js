@@ -1,8 +1,35 @@
 // DEBUG
 var trace = function(msg){ console.log(msg); };
 
+// VARS
 var main_weather;
+var main_gif;
 
+
+
+
+// LOADER
+function load_JSON_data(file, callback)
+{
+	var xobj = new XMLHttpRequest();
+
+	xobj.overrideMimeType("application/json");
+	xobj.open('GET', file, true);
+	xobj.onreadystatechange = function()
+	{
+		if(xobj.readyState == 4 && xobj.status == "200")
+		{
+			callback(xobj.responseText);
+		}
+	};
+
+	xobj.send();	
+}
+
+
+
+
+// ENTRY
 function pageLoad_init()
 {
 	trace("pageLoad_init();");
@@ -10,6 +37,10 @@ function pageLoad_init()
 	weather_build();
 }
 
+
+
+
+// WEATHER
 function weather_build()
 {
 	// 1a67481da557ef3b
@@ -31,31 +62,40 @@ function weather_data_found(data)
 function weather_define()
 {
 	var w = main_weather.data.current_observation.weather;
-
-	// https://www.wunderground.com/weather/api/d/docs?d=resources/phrase-glossary
+	var ws = {};
 
 	main_weather.weatherType = w.toLowerCase();
 
-	trace(main_weather.weatherType);
+	ws = weatherTypeCreate(main_weather.weatherType);
+
+	main_weather.weatherUseSearch 	= ws.dataWeatherType;
+	main_weather.weatherUseDisplay 	= ws.dataDisplay;
+
+	trace(main_weather);
 }
 
 
 
 
-function load_JSON_data(file, callback)
+// GIF
+function gif_build()
 {
-	var xobj = new XMLHttpRequest();
+	main_gif = {};
+	main_gif.url = "https://api.giphy.com/v1/gifs/search?q=" + main_weather.weatherUseSearch + "&api_key=dc6zaTOxFJmzC";
 
-	xobj.overrideMimeType("application/json");
-	xobj.open('GET', file, true);
-	xobj.onreadystatechange = function()
-	{
-		if(xobj.readyState == 4 && xobj.status == "200")
-		{
-			callback(xobj.responseText);
-		}
-	};
-
-	xobj.send();	
+	load_JSON_data(main_gif.url, gif_data_found);
 }
 
+function gif_data_found(data)
+{
+	main_gif.data = JSON.parse(data);
+
+	trace(main_gif.data);
+
+	gif_define();
+}
+
+function gif_define()
+{
+	
+}
