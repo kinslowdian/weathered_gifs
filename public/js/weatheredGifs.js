@@ -82,9 +82,10 @@ function weather_define()
 // GIF
 function gif_build()
 {
-	main_gif = {};
-	main_gif.url = "https://api.giphy.com/v1/gifs/search?q=" + main_weather.weatherUseSearch + "&api_key=dc6zaTOxFJmzC";
-	main_gif.target = document.querySelector("#display-wrapper .display-gif");
+	main_gif 				= {};
+	main_gif.url 			= "https://api.giphy.com/v1/gifs/search?q=" + main_weather.weatherUseSearch + "&api_key=dc6zaTOxFJmzC";
+	main_gif.target 		= document.querySelector("#display-wrapper .display-gif");
+	main_gif.description 	= document.querySelector("#display-wrapper .display-text");
 
 	load_JSON_data(main_gif.url, gif_data_found);
 }
@@ -104,12 +105,13 @@ function gif_define()
 	var gifFile;
 
 	gifSelect = Math.floor(Math.random() * main_gif.data.data.length);
-	gifFile = main_gif.data.data[gifSelect].images.downsized_large.url;
+	main_gif.file = main_gif.data.data[gifSelect].images.downsized_large.url;
 
-	gif_insert(gifFile);
+	gif_insert();
 }
 
-function gif_insert(file)
+function gif_insert()
 {
-	main_gif.target.style.backgroundImage = "url(" + file + ")";
+	main_gif.target.style.backgroundImage = "url(" + main_gif.file + ")";
+	main_gif.description.innerHTML = main_weather.weatherUseDisplay;
 }

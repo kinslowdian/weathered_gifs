@@ -1,0 +1,53 @@
+[light/heavy] drizzle
+[light/heavy] rain
+[light/heavy] snow
+[light/heavy] snow grains
+[light/heavy] ice crystals
+[light/heavy] ice pellets
+[light/heavy] hail
+[light/heavy] mist
+[light/heavy] fog
+[light/heavy] fog patches
+[light/heavy] smoke
+[light/heavy] volcanic ash
+[light/heavy] widespread dust
+[light/heavy] sand
+[light/heavy] haze
+[light/heavy] spray
+[light/heavy] dust whirls
+[light/heavy] sandstorm
+[light/heavy] low drifting snow
+[light/heavy] low drifting widespread dust
+[light/heavy] low drifting sand
+[light/heavy] blowing snow
+[light/heavy] blowing widespread dust
+[light/heavy] blowing sand
+[light/heavy] rain mist
+[light/heavy] rain showers
+[light/heavy] snow showers
+[light/heavy] snow blowing snow mist
+[light/heavy] ice pellet showers
+[light/heavy] hail showers
+[light/heavy] small hail showers
+[light/heavy] thunderstorm
+[light/heavy] thunderstorms and rain
+[light/heavy] thunderstorms and snow
+[light/heavy] thunderstorms and ice pellets
+[light/heavy] thunderstorms with hail
+[light/heavy] thunderstorms with small hail
+[light/heavy] freezing drizzle
+[light/heavy] freezing rain
+[light/heavy] freezing fog
+patches of fog
+shallow fog
+
+overcastpartial fog
+clear
+partly cloudy
+mostly cloudy
+scattered clouds
+small hail
+squalls
+funnel cloud
+unknown precipitation
+unknown
