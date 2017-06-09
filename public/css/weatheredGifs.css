@@ -15,7 +15,7 @@ html, body
 	width: 100%;
 	height: 100%;
 
-	/*background: #000;*/
+	background: #000;
 }
 
 #display-wrapper
@@ -44,53 +44,32 @@ html, body
 	position: absolute;
 	left: 0; top: 0; right: 0; bottom: 0;
 
-	/*background: rgba(0, 255, 0, 0.2);*/
-
 	transition: 600ms ease-in-out;
 }
 
 .display-text-wrapper-default
 {
-/*	transform: scale(0);
-	opacity: 0;*/
-
 	transform: translateY(100%);
 }
 
 .display-text
 {
 	width: 100%;
-
-	padding: 0.2em;
-
 	position: absolute;
 	display: block;
 
+	padding: 0.2em;
+	bottom: 0;
+
 	font-size: 1em;
 	font-weight: bolder;
-
+	line-height: 1;
+	word-wrap: break-word;
 	text-transform: uppercase;
 
 	color: #fff;
 
 	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-}
-
-
-
-.text-left
-{
-	text-align: left;
-	left: 0; bottom: 0;
-}
-
-.text-center
-{
-	text-align: center;
-
-	left: 50%; top: 50%;
-
-	transform: translate(-50%, -50%);
 }
 
 
@@ -133,7 +112,7 @@ html, body
 {
 	#display-wrapper
 	{
-		font-size: 35px;
+		font-size: 25px;
 	}	
 }
 
@@ -141,7 +120,7 @@ html, body
 {
 	#display-wrapper
 	{
-		font-size: 70px;
+		font-size: 50px;
 	}	
 }
 
@@ -149,7 +128,15 @@ html, body
 {
 	#display-wrapper
 	{
-		font-size: 140px;
+		font-size: 75px;
+	}
+}
+
+@media only screen and (min-width: 1200px)
+{
+	#display-wrapper
+	{
+		font-size: 100px;
 	}
 }
 
