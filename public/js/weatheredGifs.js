@@ -114,4 +114,6 @@ function gif_insert()
 {
 	main_gif.target.style.backgroundImage = "url(" + main_gif.file + ")";
 	main_gif.description.innerHTML = main_weather.weatherUseDisplay;
+
+	main_gif.description.classList.remove("display-text-default"); 
 }

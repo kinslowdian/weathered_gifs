@@ -64,7 +64,20 @@ html, body
 
 	/*text-shadow: 0px 0px 80px rgba(0, 0, 0, 0.2);*/
 
+	transform: scale(1);
 
+
+}
+
+.display-text-tween
+{
+	transition: 300ms ease-in-out;
+}
+
+.display-text-default
+{
+	/*transform: scale(0);*/
+	opacity: 0;
 }
 
 .text-left
