@@ -126,3 +126,31 @@ html, body
 	0%		{transform: translateY(0px);}
 	100%	{transform: translateY(-4px);}
 }
+
+
+
+@media only screen and (min-width: 300px)
+{
+	#display-wrapper
+	{
+		font-size: 35px;
+	}	
+}
+
+@media only screen and (min-width: 600px)
+{
+	#display-wrapper
+	{
+		font-size: 70px;
+	}	
+}
+
+@media only screen and (min-width: 900px)
+{
+	#display-wrapper
+	{
+		font-size: 140px;
+	}
+}
+
+
