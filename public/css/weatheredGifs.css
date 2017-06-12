@@ -27,6 +27,9 @@ html, body
 	overflow: hidden;
 
 	font-family: 'Varela', sans-serif;
+
+	font-family: 'Alegreya', serif;
+
 	font-size: 140px;
 }
 
@@ -55,21 +58,55 @@ html, body
 .display-text
 {
 	width: 100%;
+	height: auto;
 	position: absolute;
-	display: block;
+
+	bottom: 0;
+
+	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.display-text p
+{
+	display: inline-block;
 
 	padding: 0.2em;
-	bottom: 0;
 
 	font-size: 1em;
 	font-weight: bolder;
+	font-weight: normal;
 	line-height: 1;
 	word-wrap: break-word;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 
 	color: #fff;
+}
 
-	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+.display-text .display-type
+{
+	text-align: left;
+}
+
+.display-text .display-temp
+{
+	text-align: right;
+	float: right;
+
+	font-size: 0.5em;
+
+	transition: 400ms ease-in-out;
+}
+
+.display-temp-default
+{
+	opacity: 0;
+	transform: translateX(100%);
+}
+
+.display-text .display-temp sup 
+{ 
+    /*vertical-align: super;*/
+    font-size: smaller;
 }
 
 

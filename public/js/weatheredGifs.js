@@ -62,6 +62,7 @@ function weather_data_found(data)
 function weather_define()
 {
 	var w = main_weather.data.current_observation.weather;
+	var t = main_weather.data.current_observation.temp_c;
 	var ws = {};
 
 	main_weather.weatherType = w.toLowerCase();
@@ -70,6 +71,7 @@ function weather_define()
 
 	main_weather.weatherUseSearch 	= ws.dataWeatherType;
 	main_weather.weatherUseDisplay 	= ws.dataDisplay;
+	main_weather.weatherUseTemp		= t;
 
 	trace(main_weather);
 
@@ -86,7 +88,8 @@ function gif_build()
 	main_gif.url 					= "https://api.giphy.com/v1/gifs/search?q=" + main_weather.weatherUseSearch + "&api_key=dc6zaTOxFJmzC";
 	main_gif.target 				= document.querySelector("#display-wrapper .display-gif");
 	main_gif.descriptionContainer 	= document.querySelector("#display-wrapper .display-text-wrapper");
-	main_gif.description 			= document.querySelector("#display-wrapper .display-text-wrapper .display-text");
+	main_gif.description 			= document.querySelector("#display-wrapper .display-text-wrapper .display-type");
+	main_gif.temp					= document.querySelector("#display-wrapper .display-text-wrapper .display-temp");
 
 	load_JSON_data(main_gif.url, gif_data_found);
 }
@@ -116,12 +119,23 @@ function gif_insert()
 	var delay;
 
 	main_gif.target.style.backgroundImage = "url(" + main_gif.file + ")";
-	main_gif.description.innerHTML = main_weather.weatherUseDisplay;
+	
+	main_gif.description.innerHTML 	= main_weather.weatherUseDisplay;
+	main_gif.temp.innerHTML			= main_weather.weatherUseTemp + "<sup>&#8451</sup>";
 
 	delay = setTimeout(gif_explain, 1.5 * 1000);
 }
 
 function gif_explain()
 {
+	main_gif.descriptionContainer.addEventListener("transitionend", gif_weather, false);
+
 	main_gif.descriptionContainer.classList.remove("display-text-wrapper-default"); 	
+}
+
+function gif_weather(event)
+{
+	main_gif.descriptionContainer.removeEventListener("transitionend", gif_weather, false);	
+
+	main_gif.temp.classList.remove("display-temp-default");
 }

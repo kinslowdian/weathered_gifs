@@ -17,7 +17,7 @@ function weatherTypeCreate(string)
 		case "rain":
 		{
 			wtc.dataWeatherType 	= "rain";
-			wtc.dataDisplay 		= "rain";
+			wtc.dataDisplay 		= "Rain";
 			
 			break;
 		}
@@ -41,7 +41,7 @@ function weatherTypeCreate(string)
 		case "blowing snow":
 		{
 			wtc.dataWeatherType 	= "snow";
-			wtc.dataDisplay 		= "snow";
+			wtc.dataDisplay 		= "Snow";
 
 			break;
 		}
@@ -52,7 +52,7 @@ function weatherTypeCreate(string)
 		case "hail":
 		{
 			wtc.dataWeatherType 	= "hail";
-			wtc.dataDisplay 		= "hail";
+			wtc.dataDisplay 		= "Hail";
 
 			break;
 		}
@@ -62,7 +62,7 @@ function weatherTypeCreate(string)
 		case "mist":
 		{
 			wtc.dataWeatherType 	= "mist";
-			wtc.dataDisplay 		= "mist";
+			wtc.dataDisplay 		= "Mist";
 
 			break;
 		}
@@ -75,7 +75,7 @@ function weatherTypeCreate(string)
 		case "fog patches":
 		{
 			wtc.dataWeatherType 	= "fog";
-			wtc.dataDisplay 		= "fog";
+			wtc.dataDisplay 		= "Fog";
 
 			break;
 		}
@@ -85,7 +85,7 @@ function weatherTypeCreate(string)
 		case "smoke":
 		{
 			wtc.dataWeatherType 	= "smoke";
-			wtc.dataDisplay 		= "smoke";
+			wtc.dataDisplay 		= "Smoke";
 
 			break;
 		}
@@ -95,7 +95,7 @@ function weatherTypeCreate(string)
 		case "volcanic ash":
 		{
 			wtc.dataWeatherType 	= "volcano";
-			wtc.dataDisplay 		= "volcano";
+			wtc.dataDisplay 		= "Volcano";
 
 			break;
 		}
@@ -106,7 +106,7 @@ function weatherTypeCreate(string)
 		case "dust":
 		{
 			wtc.dataWeatherType 	= "dust";
-			wtc.dataDisplay 		= "dust";
+			wtc.dataDisplay 		= "Dust";
 
 			break;
 		}
@@ -126,7 +126,7 @@ function weatherTypeCreate(string)
 		case "blowing sand":
 		{
 			wtc.dataWeatherType 	= "sandstorm";
-			wtc.dataDisplay 		= "sandstorm";
+			wtc.dataDisplay 		= "Sandstorm";
 
 			break;
 		}
@@ -136,7 +136,7 @@ function weatherTypeCreate(string)
 		case "haze":
 		{
 			wtc.dataWeatherType 	= "haze";
-			wtc.dataDisplay 		= "haze";
+			wtc.dataDisplay 		= "Haze";
 
 			break;
 		}
@@ -146,7 +146,7 @@ function weatherTypeCreate(string)
 		case "spray":
 		{
 			wtc.dataWeatherType 	= "spray";
-			wtc.dataDisplay 		= "spray";
+			wtc.dataDisplay 		= "Spray";
 
 			break;
 		}
@@ -163,7 +163,7 @@ function weatherTypeCreate(string)
 		case "widespread dust":
 		{
 			wtc.dataWeatherType 	= "dust+storm";
-			wtc.dataDisplay 		= "dust storm";
+			wtc.dataDisplay 		= "Dust Storm";
 
 			break;
 		}
@@ -174,7 +174,7 @@ function weatherTypeCreate(string)
 		case "rain mist":
 		{
 			wtc.dataWeatherType 	= "mist";
-			wtc.dataDisplay 		= "mist";
+			wtc.dataDisplay 		= "Mist";
 
 			break;
 		}
@@ -184,7 +184,7 @@ function weatherTypeCreate(string)
 		case "rain showers":
 		{
 			wtc.dataWeatherType 	= "rain+showers";
-			wtc.dataDisplay 		= "rain showers";
+			wtc.dataDisplay 		= "Rain Showers";
 
 			break;
 		}
@@ -194,7 +194,7 @@ function weatherTypeCreate(string)
 		case "snow showers":
 		{
 			wtc.dataWeatherType 	= "snow+showers";
-			wtc.dataDisplay 		= "snow showers";
+			wtc.dataDisplay 		= "Snow Showers";
 
 			break;
 		}
@@ -206,7 +206,7 @@ function weatherTypeCreate(string)
 		case "snow mist":
 		{
 			wtc.dataWeatherType 	= "snow+mist";
-			wtc.dataDisplay 		= "snow mist";
+			wtc.dataDisplay 		= "Snow Mist";
 
 			break;
 		}
@@ -222,7 +222,7 @@ function weatherTypeCreate(string)
 		case "small hail showers":
 		{
 			wtc.dataWeatherType 	= "hail+showers";
-			wtc.dataDisplay 		= "hail showers";
+			wtc.dataDisplay 		= "Hail Showers";
 
 			break;
 		}
@@ -247,7 +247,7 @@ function weatherTypeCreate(string)
 		case "thunderstorms with small hail":
 		{
 			wtc.dataWeatherType 	= "thunderstorm";
-			wtc.dataDisplay 		= "thunderstorm";
+			wtc.dataDisplay 		= "Thunderstorm";
 
 			break;
 		}
@@ -260,7 +260,7 @@ function weatherTypeCreate(string)
 		case "freezing rain":
 		{
 			wtc.dataWeatherType 	= "freezing+rain";
-			wtc.dataDisplay 		= "freezing rain";
+			wtc.dataDisplay 		= "Freezing Rain";
 
 			break;
 		}
@@ -270,7 +270,7 @@ function weatherTypeCreate(string)
 		case "freezing fog":
 		{
 			wtc.dataWeatherType 	= "freezing+fog";
-			wtc.dataDisplay 		= "freezing fog";
+			wtc.dataDisplay 		= "Freezing Fog";
 
 			break;
 		}
@@ -281,7 +281,7 @@ function weatherTypeCreate(string)
 		case "fog":
 		{
 			wtc.dataWeatherType 	= "fog";
-			wtc.dataDisplay 		= "fog";
+			wtc.dataDisplay 		= "Fog";
 
 			break;
 		}
@@ -289,7 +289,7 @@ function weatherTypeCreate(string)
 		case "overcast":
 		{
 			wtc.dataWeatherType 	= "overcast";
-			wtc.dataDisplay 		= "overcast";
+			wtc.dataDisplay 		= "Overcast";
 
 			break;
 		}
@@ -297,7 +297,7 @@ function weatherTypeCreate(string)
 		case "clear":
 		{
 			wtc.dataWeatherType 	= "sunny";
-			wtc.dataDisplay 		= "sunny";
+			wtc.dataDisplay 		= "Sunny";
 
 			break;
 		}
@@ -309,7 +309,7 @@ function weatherTypeCreate(string)
 		case "clouds":
 		{
 			wtc.dataWeatherType 	= "cloudy";
-			wtc.dataDisplay 		= "cloudy";
+			wtc.dataDisplay 		= "Cloudy";
 
 			break;
 		}
@@ -317,7 +317,7 @@ function weatherTypeCreate(string)
 		case "squalls":
 		{
 			wtc.dataWeatherType 	= "storm";
-			wtc.dataDisplay 		= "storm";
+			wtc.dataDisplay 		= "Storm";
 
 			break;
 		}
@@ -325,7 +325,7 @@ function weatherTypeCreate(string)
 		case "funnel cloud":
 		{
 			wtc.dataWeatherType 	= "tornado";
-			wtc.dataDisplay 		= "tornado";
+			wtc.dataDisplay 		= "Tornado";
 
 			break;
 		}
@@ -333,7 +333,7 @@ function weatherTypeCreate(string)
 		default:
 		{
 			wtc.dataWeatherType 	= "weather";
-			wtc.dataDisplay 		= "usual weather";
+			wtc.dataDisplay 		= "Usual Weather";
 		}
 
 	}
