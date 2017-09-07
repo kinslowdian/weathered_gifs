@@ -119,6 +119,9 @@ html, body
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+/*	outline: 100px solid #fff;
+	outline-offset: -100px;*/
 }
 
 .screen-fx

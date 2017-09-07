@@ -23,7 +23,7 @@ function load_JSON_data(file, callback)
 		}
 	};
 
-	xobj.send();	
+	xobj.send();
 }
 
 
@@ -119,7 +119,7 @@ function gif_insert()
 	var delay;
 
 	main_gif.target.style.backgroundImage = "url(" + main_gif.file + ")";
-	
+
 	main_gif.description.innerHTML 	= main_weather.weatherUseDisplay;
 	main_gif.temp.innerHTML			= main_weather.weatherUseTemp + "<sup>&#8451</sup>";
 
@@ -130,12 +130,12 @@ function gif_explain()
 {
 	main_gif.descriptionContainer.addEventListener("transitionend", gif_weather, false);
 
-	main_gif.descriptionContainer.classList.remove("display-text-wrapper-default"); 	
+	main_gif.descriptionContainer.classList.remove("display-text-wrapper-default");
 }
 
 function gif_weather(event)
 {
-	main_gif.descriptionContainer.removeEventListener("transitionend", gif_weather, false);	
+	main_gif.descriptionContainer.removeEventListener("transitionend", gif_weather, false);
 
 	main_gif.temp.classList.remove("display-temp-default");
 }
