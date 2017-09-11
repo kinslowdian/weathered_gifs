@@ -96,6 +96,7 @@ html, body
 	font-size: 1em;
 }
 
+/*
 .display-temp-wrapper
 {
 	width: auto;
@@ -113,6 +114,33 @@ html, body
 
 .display-temp-content
 {
+	transition: 300ms ease-out;	
+}
+*/
+
+.display-type-wrapper
+{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	bottom: 0; right: 0;
+}
+
+.display-temp-content
+{
+	width: auto;
+	height: auto;
+	position: absolute;
+
+	/*top: 0;*/
+	bottom: 0; right: 0;
+
+	background: rgba(237, 247, 237, 0.8);
+	box-shadow: 0px -1px 14px rgba(10, 10, 10, 0.2);
+
+	-webkit-filter: blur(0.3px);
+	filter: blur(0.3px);
+
 	transition: 300ms ease-out;	
 }
 
