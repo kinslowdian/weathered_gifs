@@ -89,7 +89,7 @@ function gif_build()
 	main_gif.target 				= document.querySelector("#display-wrapper .display-gif");
 	main_gif.descriptionContainer 	= document.querySelector("#display-wrapper .display-text-wrapper");
 	main_gif.description 			= document.querySelector("#display-wrapper .display-text-wrapper .display-type");
-	main_gif.temp					= document.querySelector("#display-wrapper .display-text-wrapper .display-temp");
+	main_gif.temp					= document.querySelector("#display-wrapper .display-temp-wrapper .display-temp");
 
 	load_JSON_data(main_gif.url, gif_data_found);
 }
@@ -121,7 +121,8 @@ function gif_insert()
 	main_gif.target.style.backgroundImage = "url(" + main_gif.file + ")";
 
 	main_gif.description.innerHTML 	= main_weather.weatherUseDisplay;
-	main_gif.temp.innerHTML			= main_weather.weatherUseTemp + "<sup>&#8451</sup>";
+	// main_gif.temp.innerHTML			= main_weather.weatherUseTemp + "<sup>&#8451</sup>";
+	main_gif.temp.innerHTML			= main_weather.weatherUseTemp;
 
 	delay = setTimeout(gif_explain, 1.5 * 1000);
 }
