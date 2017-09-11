@@ -124,7 +124,6 @@ function gif_insert()
 	main_gif.target.style.backgroundImage = "url(" + main_gif.file + ")";
 
 	main_gif.description.innerHTML 	= main_weather.weatherUseDisplay;
-	// main_gif.temp.innerHTML			= main_weather.weatherUseTemp + "<sup>&#8451</sup>";
 	main_gif.temp.innerHTML			= main_weather.weatherUseTemp;
 
 	delay = setTimeout(gif_explain, 1.5 * 1000);

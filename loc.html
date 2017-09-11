@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="public/css/reset.css">
+
+<style type="text/css">
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+
+.output
+{
+	font-family: sans-serif;
+	font-weight: bolder;
+	color: rgb(100, 100, 100);
+	font-size: 100px;
+
+	position: relative;
+
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn
+{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+
+	background: #ff0033;
+}
+
+</style>
+
+<title>!LOCATION!</title>
+</head>
+
+<body onload="fire()">
+
+<div class="output">
+	<div class="main">test</div>
+	<div class="lon"></div>
+	<div class="lat"></div>
+</div>
+
+<div class="btn"></div>
+
+<script type="text/javascript">
+// DEBUG
+var trace = function(m){ console.log(m); };
+
+// MAIN
+var output = document.querySelector(".output .main");
+var outputLON = document.querySelector(".output .lon");
+var outputLAT = document.querySelector(".output .lat");
+var btn = document.querySelector(".btn");
+
+function fire()
+{
+	trace("fire();");
+
+	location_find();
+}
+
+function location_find()
+{
+	window.navigator.geolocation.getCurrentPosition(location_found, location_lost);
+}
+
+function location_found(position)
+{
+	output.innerHTML = "OK";
+
+	trace(position);
+
+	outputLON.innerHTML = position.coords.longitude;
+	outputLAT.innerHTML = position.coords.latitude;
+}
+
+function location_lost()
+{
+	output.innerHTML = "FAIL";
+}
+
+</script>
+</body>
+
+</html>
