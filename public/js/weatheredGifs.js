@@ -64,6 +64,8 @@ function weather_define()
 {
 	var w = main_weather.data.current_observation.weather;
 	var t = main_weather.data.current_observation.temp_c;
+	var g = main_weather.data.current_observation.wind_mph;
+
 	var ws = {};
 
 	main_weather.weatherType = w.toLowerCase();
@@ -73,6 +75,7 @@ function weather_define()
 	main_weather.weatherUseSearch 	= ws.dataWeatherType;
 	main_weather.weatherUseDisplay 	= ws.dataDisplay;
 	main_weather.weatherUseTemp		= t;
+	main_weather.weatherUseWind		= g;
 
 	trace(main_weather);
 
@@ -125,7 +128,7 @@ function gif_insert()
 	main_gif.target.style.backgroundImage = "url(" + main_gif.file + ")";
 
 	main_gif.description.innerHTML 	= main_weather.weatherUseDisplay;
-	main_gif.temp.innerHTML			= main_weather.weatherUseTemp;
+	main_gif.temp.innerHTML			= Math.round(main_weather.weatherUseTemp) + "c - " + Math.round(main_weather.weatherUseWind) + "mph";
 
 	delay = setTimeout(gif_explain, 1.5 * 1000);
 }
