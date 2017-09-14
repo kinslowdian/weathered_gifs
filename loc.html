@@ -114,12 +114,18 @@ function callback(data)
 function advance()
 {
 	// LAT LON
-	var wg_url = 'http://api.wunderground.com/api/1a67481da557ef3b/geolookup/q/' + data_location.latitude + ',' + data_location.longitude + '.json';
+	// var wg_url = 'http://api.wunderground.com/api/1a67481da557ef3b/geolookup/q/' + data_location.latitude + ',' + data_location.longitude + '.json';
 
-	load_JSON_data(wg_url, weather_data_found);
+	var wg_url = 'http://api.wunderground.com/api/1a67481da557ef3b/conditions/q/' + data_location.latitude + ',' + data_location.longitude + '.json';
+
+	load_JSON_data(wg_url, weather_data_found1);
+
+	var auto = "http://api.wunderground.com/api/1a67481da557ef3b/conditions/q/autoip.json";
+
+	load_JSON_data(auto, weather_data_found2);
 }
 
-function weather_data_found(data)
+function weather_data_found1(data)
 {
 	var demo;
 
@@ -129,6 +135,18 @@ function weather_data_found(data)
 	
 	trace(demo);
 }
+
+function weather_data_found2(data)
+{
+	var demo;
+
+	demo = {};
+
+	demo = JSON.parse(data);
+	
+	trace(demo);
+}
+
 
 // LOADER
 function load_JSON_data(file, callback)
