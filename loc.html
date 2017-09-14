@@ -71,6 +71,8 @@ function fire()
 
 	outputLON.innerHTML = data_location.longitude;
 	outputLAT.innerHTML = data_location.latitude;
+
+	advance();
 }
 
 function location_find()
@@ -109,6 +111,42 @@ function callback(data)
 
 }
 
+function advance()
+{
+	// LAT LON
+	var wg_url = 'http://api.wunderground.com/api/1a67481da557ef3b/geolookup/q/' + data_location.latitude + ',' + data_location.longitude + '.json';
+
+	load_JSON_data(wg_url, weather_data_found);
+}
+
+function weather_data_found(data)
+{
+	var demo;
+
+	demo = {};
+
+	demo = JSON.parse(data);
+	
+	trace(demo);
+}
+
+// LOADER
+function load_JSON_data(file, callback)
+{
+	var xobj = new XMLHttpRequest();
+
+	xobj.overrideMimeType("application/json");
+	xobj.open('GET', file, true);
+	xobj.onreadystatechange = function()
+	{
+		if(xobj.readyState == 4 && xobj.status == "200")
+		{
+			callback(xobj.responseText);
+		}
+	};
+
+	xobj.send();
+}
 
 
 </script>
