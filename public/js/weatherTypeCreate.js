@@ -308,8 +308,8 @@ function weatherTypeCreate(string)
 		case "scattered clouds":
 		case "clouds":
 		{
-			wtc.dataWeatherType 	= "cloudy";
-			wtc.dataDisplay 		= "Cloudy";
+			wtc.dataWeatherType 	= "cloud";
+			wtc.dataDisplay 		= "Cloud";
 
 			break;
 		}

@@ -45,7 +45,8 @@ function weather_build()
 {
 	// 1a67481da557ef3b
 	main_weather = {};
-	main_weather.url = "http://api.wunderground.com/api/1a67481da557ef3b/conditions/q/UK/London.json";
+	// main_weather.url = "http://api.wunderground.com/api/1a67481da557ef3b/conditions/q/UK/London.json";
+	main_weather.url = "http://api.wunderground.com/api/1a67481da557ef3b/conditions/q/autoip.json";
 
 	load_JSON_data(main_weather.url, weather_data_found);
 }
