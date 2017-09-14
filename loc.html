@@ -60,20 +60,26 @@ var outputLON = document.querySelector(".output .lon");
 var outputLAT = document.querySelector(".output .lat");
 var btn = document.querySelector(".btn");
 
+var data_location;
+
 function fire()
 {
 	trace("fire();");
 
-	location_find();
+	// location_find();
+	output.innerHTML = "BASIC";
+
+	outputLON.innerHTML = data_location.longitude;
+	outputLAT.innerHTML = data_location.latitude;
 }
 
 function location_find()
 {
-	window.navigator.geolocation.getCurrentPosition(location_found, location_lost);
+	// window.navigator.geolocation.getCurrentPosition(location_found, location_lost);
 
 	// https://www.geoip-db.com/
 
-	load_JSON_data("https://geoip-db.com/jsonp", basic);
+	// load_JSON_data("https://geoip-db.com/jsonp", basic);
 }
 
 function location_found(position)
@@ -91,33 +97,23 @@ function location_lost()
 	output.innerHTML = "FAIL";
 }
 
-// LOADER
-function load_JSON_data(file, callback)
+function callback(data)
 {
-	var xobj = new XMLHttpRequest();
+	data_location = {};
+	data_location = data;
 
-	xobj.overrideMimeType("application/json");
-	xobj.open('GET', file, true);
-	xobj.onreadystatechange = function()
-	{
-		if(xobj.readyState == 4 && xobj.status == "200")
-		{
-			callback(xobj.responseText);
-		}
-	};
-
-	xobj.send();
-}
-
-function basic(data)
-{
 	trace(data);
+	trace(data.latitude);
+	trace(data.longitude);
 	// alert(data.city);
+
 }
 
 
 
 </script>
+
+<script type="text/javascript" src="https://geoip-db.com/jsonp"></script>
 </body>
 
 </html>
