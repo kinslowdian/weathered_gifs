@@ -70,6 +70,10 @@ function fire()
 function location_find()
 {
 	window.navigator.geolocation.getCurrentPosition(location_found, location_lost);
+
+	// https://www.geoip-db.com/
+
+	load_JSON_data("https://geoip-db.com/jsonp", basic);
 }
 
 function location_found(position)
@@ -86,6 +90,32 @@ function location_lost()
 {
 	output.innerHTML = "FAIL";
 }
+
+// LOADER
+function load_JSON_data(file, callback)
+{
+	var xobj = new XMLHttpRequest();
+
+	xobj.overrideMimeType("application/json");
+	xobj.open('GET', file, true);
+	xobj.onreadystatechange = function()
+	{
+		if(xobj.readyState == 4 && xobj.status == "200")
+		{
+			callback(xobj.responseText);
+		}
+	};
+
+	xobj.send();
+}
+
+function basic(data)
+{
+	trace(data);
+	// alert(data.city);
+}
+
+
 
 </script>
 </body>
